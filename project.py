@@ -1,9 +1,9 @@
 from datetime import datetime, timedelta
 import random
 import classes
-import main
-import admin
-import user
+import main_1
+import admin1
+import user1
 
 
 def project():

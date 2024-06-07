@@ -1,4 +1,4 @@
-from main import Database
+from main_1 import Database
 
 
 class Admin:

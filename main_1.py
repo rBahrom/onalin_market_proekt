@@ -1,15 +1,18 @@
+import os
 import psycopg2 as psql
+from dotenv import load_dotenv
+load_dotenv()
 
 
 class Database:
     @staticmethod
     def connect(query: str, query_type: str):
         db = psql.connect(
-            database='lesson_exam',
-            user='postgres',
-            password='bakhrom05',
-            host='localhost',
-            port='5432'
+            database=os.getenv('db_database'),
+            user=os.getenv('db_user'),
+            password=os.getenv('db_password'),
+            host=os.getenv('db_host'),
+            port=os.getenv('db_port')
         )
         cursor = db.cursor()
         cursor.execute(query)
